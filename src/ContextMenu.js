@@ -1,7 +1,7 @@
 import "./ContextMenu.css"
 import Fade from "react-reveal/Fade";
 
-
+function ContextMenu(props) {
     let style = {
         left: props.cursorPos[0],
         top: props.cursorPos[1]
