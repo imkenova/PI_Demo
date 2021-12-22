@@ -22,10 +22,16 @@ function Post(props){
     }
 
     function removePost(){
-        let extraction = JSON.parse(localStorage['posts'])
-        extraction = extraction.filter((p, i) => i != props.id)
-        localStorage['posts'] = JSON.stringify(extraction)
-        props.updater(props.tick + 1)
+        const conf = window.confirm(`Вы уверены, что хотите удалить заметку?`);
+        if (conf) {
+            let extraction = JSON.parse(localStorage['posts'])
+            extraction = extraction.filter((p, i) => i != props.id)
+            localStorage['posts'] = JSON.stringify(extraction)
+            props.updater(props.tick + 1)
+        } else {
+            alert(`Удаление было успешно отклонено `);
+          }
+        
     }
 
     function editPost(){
