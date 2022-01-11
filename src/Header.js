@@ -4,7 +4,7 @@ import {memo} from "react";
 
 function Header() {
 
-    let randomInfo = ['version', 'subjects', 'posts']
+
     let userNotification
 
 
